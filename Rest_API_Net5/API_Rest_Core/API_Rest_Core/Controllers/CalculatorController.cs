@@ -27,6 +27,7 @@ namespace API_Rest_Core.Controllers
                 var sum = Convert.ToDecimal(firstNum) + Convert.ToDecimal(secondNum);
 
                 return Ok(sum);
+
             }
 
             return BadRequest();
