@@ -20,13 +20,27 @@ namespace API_Rest_Core.Controllers
         }
 
         [HttpGet("sum/{firstNum}/{secondNum}")]
-        public IActionResult Get(string firstNum, string secondNum)
+        public IActionResult Sum(string firstNum, string secondNum)
         {
             if(IsNumeric(firstNum) && IsNumeric(secondNum))
             {
                 var sum = Convert.ToDecimal(firstNum) + Convert.ToDecimal(secondNum);
 
-                return Ok(sum);
+                return Ok(sum.ToString());
+
+            }
+
+            return BadRequest();
+        }
+
+        [HttpGet("subtraction/{firstNum}/{secondNum}")]
+        public IActionResult Subtraction(string firstNum, string secondNum)
+        {
+            if (IsNumeric(firstNum) && IsNumeric(secondNum))
+            {
+                var sum = Convert.ToDecimal(firstNum) - Convert.ToDecimal(secondNum);
+
+                return Ok(sum.ToString());
 
             }
 
