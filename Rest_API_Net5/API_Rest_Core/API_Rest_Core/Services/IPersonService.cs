@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using API_Rest_Core.Model;
 
-namespace API_Rest_Core.Services.Implementations
+namespace API_Rest_Core.Services
 {
-    public interface IPersonServices
+    public interface IPersonService
     {
         Person Create(Person person);
 
